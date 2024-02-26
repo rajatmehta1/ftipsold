@@ -1,0 +1,12 @@
+# Ignore Python build directories
+__pycache__/
+
+# Ignore all log files
+*.log
+
+# Ignore environment related directories
+.env
+.venv/
+
+# Ignore Visual Studio Code settings
+.vscode/
