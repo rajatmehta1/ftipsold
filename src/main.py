@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
 import yfinance as yf
 from helpers.ticker.stock_helper import StockHelper
 # from ..helpers.ticker.stock_helper import StockHelper
@@ -22,7 +22,7 @@ def get_stock_details(ticker_symbol):
 
 
 @app.get("/stock/{q}")
-async def read_text(q: str):
+def read_text(q: str):
     sh = StockHelper()
-    return sh.get_stock_curr(q)
+    return Response(sh.get_stock_curr(q),media_type="text/plain")
 
