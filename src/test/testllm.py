@@ -8,5 +8,5 @@ llm = OpenAI(temperature=0.9,model_name="gpt-3.5-turbo-0613")
 
 
 
-text = "How should i increase my productivity many times"
+text = "Should i leave a company that promotes people they like more rather then who build cool things."
 print(llm(text))
